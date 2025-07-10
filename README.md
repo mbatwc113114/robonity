@@ -1,31 +1,28 @@
-# Create React App
+# 🤖 Robonity
 
-This directory is a brief example of a [Create React App](https://github.com/facebook/create-react-app) site that can be deployed to Vercel with zero configuration.
+Welcome to **Robonity** – a **community platform for robotics** at **Gati Shakti Vishwavidyalaya (GSV)**, where we **share roadmaps, projects, and resources** to empower students and enthusiasts in robotics, automation, and mechatronics.
 
-## Deploy Your Own
+---
 
-Deploy your own Create React App project with Vercel.
+## 🚀 About
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/framework-boilerplates/create-react-app&template=create-react-app)
+Robonity is designed to:
 
-_Live Example: https://create-react-template.vercel.app/_
+✅ Share structured **learning roadmaps** for robotics, embedded systems, ROS, and AI in robotics.  
+✅ Host **community-driven projects** with clean documentation and learning opportunities.  
+✅ Help GSV students collaborate, build, and showcase robotics projects.  
+✅ Enable open-source contributions for robotics enthusiasts.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🛠️ Tech Stack
 
-### `npm start`
+- **Frontend**: React.js (Vite/CRA)
+- **Backend**: Coming soon (Firebase / Node.js + Express planned)
+- **Deployment**: Vercel
+- **Version Control**: Git & GitHub
 
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes. You may also see any lint errors in the console.
+## 📂 Project Structure
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.
-
-It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
