@@ -1,0 +1,15 @@
+.block:nth-child(1) {
+  background-color: #569820;
+  height:500px;
+    width: 500px;
+    margin: 5px;
+}
+
+.block:nth-child(2) {
+  background-color: #987220;
+  height:500px;
+    width: 500px;
+    margin: 5px;
+}
+
+.view{}

@@ -143,7 +143,7 @@
         /* Project Cards */
         .project-card {
             background: var(--card-bg);
-            padding: 30px;
+            padding: 5px;
             border-radius: 20px;
             border: 2px solid var(--border-color);
             transition: all 0.3s ease;
@@ -192,7 +192,7 @@ transform: translateY(-5px); /* Lifts up */
 
         .roadmap-container {
             position: relative;
-            padding: 100px 0;
+            padding: 8px 0;
         }
 
         .roadmap-line {
@@ -211,7 +211,7 @@ transform: translateY(-5px); /* Lifts up */
             margin-bottom: 150px;
             position: relative;
             opacity: 0;
-            transform: translateY(50px);
+            transform: translateY(5px);
             transition: all 0.8s ease;
         }
 
@@ -222,12 +222,12 @@ transform: translateY(-5px); /* Lifts up */
 
         .roadmap-step:nth-child(odd) .step-content {
             margin-left: 0;
-            margin-right: 60px;
+            margin-right: 10px;
             text-align: right;
         }
 
         .roadmap-step:nth-child(even) .step-content {
-            margin-left: 60px;
+            margin-left: 10px;
             margin-right: 0;
         }
         .roadmap-line
@@ -434,4 +434,4 @@ transform: translateY(-5px); /* Lifts up */
                 transform: none;
                 margin-bottom: -40px;
             }
-        }
+        } 
