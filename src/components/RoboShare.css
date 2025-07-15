@@ -1,0 +1,27 @@
+/* src/components/RoboShare.css */
+
+.roboshare-section {
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  min-height: 100vh;
+  scroll-snap-align: start;
+  background: linear-gradient(135deg, #0a0f1a, #1f2a40, #35455d);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.roboshare-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.roboshare-description {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.85;
+}

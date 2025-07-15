@@ -28,6 +28,8 @@ const CustomNavbar = () => {
             <Nav.Link href="#projects" onClick={handleNavClick}>Projects</Nav.Link>
             <Nav.Link href="#roadmap" onClick={handleNavClick}>Roadmap</Nav.Link>
             <Nav.Link href="#events" onClick={handleNavClick}>Events</Nav.Link>
+            <Nav.Link href="#roboshare" onClick={handleNavClick}>RoboShare</Nav.Link>
+
           </Nav>
           <div>
             <Button variant="outline-light" className="me-2">Sign Up</Button>
