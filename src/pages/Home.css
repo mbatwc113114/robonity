@@ -32,20 +32,30 @@ body {
     justify-content: center;
     flex-direction: column;
 }
-
-
-/* === Backgrounds === */#hero {
-    background: linear-gradient(rgba(15,32,39,0.7), rgba(32,58,67,0.7), rgba(44,83,100,0.7));
+/* === Backgrounds === */
+#hero {
+    background: linear-gradient(to right top, rgba(255, 195, 113, 0.5), rgba(255, 95, 109, 0.5));
 }
 
 #projects {
-    background: linear-gradient(rgba(13,27,42,0.7), rgba(27,38,59,0.7), rgba(65,90,119,0.7), rgba(119,141,169,0.7));
+    background: linear-gradient(to right, rgba(0, 90, 167, 0.5), rgba(2, 225, 255, 0.5));
 }
 
 #roadmap {
-    background: linear-gradient(rgba(0,31,63,0.7), rgba(0,116,217,0.7), rgba(127,219,255,0.7));
+    background: linear-gradient(to right, rgba(86, 171, 47, 0.5), rgba(168, 224, 99, 0.5));
 }
 
 #events {
-    background: linear-gradient(rgba(10,15,26,0.7), rgba(31,42,64,0.7), rgba(53,69,93,0.7));
+    background: linear-gradient(to right, rgba(170, 7, 107, 0.5), rgba(97, 4, 95, 0.5));
+}
+
+#roboshare {
+    background: linear-gradient(to right, rgba(76, 175, 80, 0.5), rgba(139, 195, 74, 0.5));
+}
+#hero,
+#projects,
+#roadmap,
+#events,
+#roboshare {
+  scroll-margin-top: 70px; /* Set this to be the height of your fixed navbar + a little extra padding */
 }

@@ -1,12 +1,17 @@
+// Navbar.js
 import React, { useState } from 'react';
 import { Navbar, Nav, Button, Container } from 'react-bootstrap';
 import './Navbar.css';
 
-const CustomNavbar = () => {
+// Accept scrolling functions as props
+const CustomNavbar = ({ scrollToHero, scrollToProjects, scrollToRoadmap, scrollToEvents, scrollToRoboShare }) => {
   const [expanded, setExpanded] = useState(false);
 
-  const handleNavClick = () => {
+  const handleNavClick = (scrollFunction) => {
     setExpanded(false); // auto-collapse navbar on link click
+    if (scrollFunction) {
+      scrollFunction(); // Call the passed scroll function
+    }
   };
 
   return (
@@ -18,17 +23,19 @@ const CustomNavbar = () => {
       fixed="top"
     >
       <Container>
-        <Navbar.Brand href="#hero" onClick={handleNavClick}>Robonity</Navbar.Brand>
+        {/* Change href to onClick */}
+        <Navbar.Brand onClick={() => handleNavClick(scrollToHero)}>Robonity</Navbar.Brand>
         <Navbar.Toggle
           aria-controls="navbar-nav"
           onClick={() => setExpanded(expanded ? false : "expanded")}
         />
         <Navbar.Collapse id="navbar-nav" className="justify-content-between">
           <Nav className="mx-auto">
-            <Nav.Link href="#projects" onClick={handleNavClick}>Projects</Nav.Link>
-            <Nav.Link href="#roadmap" onClick={handleNavClick}>Roadmap</Nav.Link>
-            <Nav.Link href="#events" onClick={handleNavClick}>Events</Nav.Link>
-            <Nav.Link href="#roboshare" onClick={handleNavClick}>RoboShare</Nav.Link>
+            {/* Change href to onClick */}
+            <Nav.Link onClick={() => handleNavClick(scrollToProjects)}>Projects</Nav.Link>
+            <Nav.Link onClick={() => handleNavClick(scrollToRoadmap)}>Roadmap</Nav.Link>
+            <Nav.Link onClick={() => handleNavClick(scrollToEvents)}>Events</Nav.Link>
+            <Nav.Link onClick={() => handleNavClick(scrollToRoboShare)}>RoboShare</Nav.Link>
 
           </Nav>
           <div>

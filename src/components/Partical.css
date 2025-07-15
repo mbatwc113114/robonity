@@ -7,26 +7,27 @@
   overflow: hidden;
   z-index: -10;
   pointer-events: none;
-
-  background: linear-gradient(135deg, #15366b, #1083e7, #0a2c3a);
-/* gradient */
+  background: linear-gradient(135deg, #8f8f8f, #000000, #444444); /* Keep your background */
 }
 
 .particle {
   position: absolute;
-  width: 6px;
-  height: 6px;
-  background: rgba(255, 255, 255, 0.8);
+  width: 20px; /* Smaller particles for a more refined look */
+  height: 20px;
+  background: rgba(255, 255, 255, .9);
   border-radius: 50%;
-  animation: floatParticle linear forwards;
+  opacity: 0; /* Start invisible */
+  transform: translate(-50%, -50%); /* Center the particle correctly */
+  animation: radiateParticle linear forwards;
 }
 
-@keyframes floatParticle {
+@keyframes radiateParticle {
   0% {
-    transform: translateY(0) scale(1);
+    transform: translate(-50%, -50%) scale(0.2); /* Start very small and centered */
+    opacity: 0.9; /* Visible at start */
   }
   100% {
-    transform: translateY(-100vh) scale(0.5);
-    opacity: 0;
+    transform: translate(var(--endX), var(--endY)) scale(1.5); /* Move to calculated end position and grow */
+    opacity: 0; /* Fade out */
   }
 }
