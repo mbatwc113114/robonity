@@ -2,7 +2,7 @@ import React, {useRef} from 'react'
 import CustomNavbar from '../components/Navbar';
 import Partical from '../components/Partical';
 import Hero from '../components/Hero';
-import { redirect } from 'react-router-dom';
+
 
 export default function RoboSharePage() {
   // Create refs for each section
