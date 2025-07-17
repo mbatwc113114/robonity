@@ -1,58 +1,67 @@
-import React, {useRef} from 'react'
+import React, { useRef } from 'react';
 import CustomNavbar from '../components/Navbar';
-import Partical from '../components/Partical';
 import Hero from '../components/Hero';
-import { redirect } from 'react-router-dom';
+import Partical from '../components/Partical';
 
 export default function RoboSharePage() {
-  // Create refs for each section
-    const heroRef = useRef(null);
-    const projectsRef = useRef(null);
-    const roadmapRef = useRef(null);
-    const eventsRef = useRef(null);
-    const roboshareRef = useRef(null);
-  
-    // Function to scroll to a specific section
-    const scrollToSection = (sectionRef) => {
-      if (sectionRef.current) {
-        sectionRef.current.scrollIntoView({
-          behavior: 'smooth', // Enable smooth scrolling
-          block: 'start',      // Align the top of the element with the top of the viewport
-        });
-      }
-    };
+  // Refs for scroll sections
+  const heroRef = useRef(null);
+  const exploreRef = useRef(null);
+  const componentsRef = useRef(null);
+  const categoryRef = useRef(null);
 
-    const redirect = (path) => {
-      window.location.href = path; // Redirect to the specified path
-    };
-  
-    // Define your navigation items as an array of objects
-    const navItems = [
-      { label: 'Robonity', scrollFunction: () => redirect('/') }, // Redirect to Robonity
-      { label: 'Explore', scrollFunction: () => scrollToSection(roadmapRef) },
-      { label: 'My Components', scrollFunction: () => scrollToSection(eventsRef) },
-      { label: 'Catagory', scrollFunction: () => scrollToSection(roboshareRef) },
-    ];
-  
-  return (<>
-    <CustomNavbar
-  navItems={navItems}
-  scrollToHero={() => scrollToSection(heroRef)} // Correct function syntax
-  title='RoboShare' // Properly passed as a separate prop
-/>
+  // Smooth scroll function
+  const scrollToSection = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
+  // Simple redirect function (renamed to avoid conflict)
+  const navigateTo = (path) => {
+    window.location.href = path;
+  };
 
-    <Partical/>
+  // Navigation config
+  const navItems = [
+    { label: 'Robonity', scrollFunction: () => navigateTo('/') }, // Back to home
+    { label: 'Explore', scrollFunction: () => scrollToSection(exploreRef) },
+    { label: 'My Components', scrollFunction: () => scrollToSection(componentsRef) },
+    { label: 'Category', scrollFunction: () => scrollToSection(categoryRef) },
+  ];
 
+  return (
+    <div className="RoboSharePage">
+      <CustomNavbar
+        navItems={navItems}
+        scrollToHero={() => scrollToSection(heroRef)}
+        title="RoboShare"
+      />
 
-     <section id="hero" className="section" ref={heroRef}> {/* Attach ref */}
-          <Hero
-            title="RoboShare"
-            subtitle="Empowering Robotics Innovation"
-            description="Platform for sharing and exploring modular robotics components, designs, and code."
-            imageSrc="https://via.placeholder.com/600x400.png?text=Robotics+Showcase"
-          />
-        </section>
-  </>
-  )
+      <Partical />
+
+      {/* Hero Section */}
+      <section id="hero" ref={heroRef}>
+        <Hero
+          title="RoboShare"
+          subtitle="Empowering Robotics Innovation"
+          description="Platform for sharing and exploring modular robotics components, designs, and code."
+          imageSrc="https://via.placeholder.com/600x400.png?text=RoboShare+Showcase"
+        />
+      </section>
+
+      {/* Placeholder sections for navigation targets */}
+      <section id="explore" ref={exploreRef}>
+        {/* Add your Explore component or content here */}
+      </section>
+
+      <section id="components" ref={componentsRef}>
+        {/* Add your My Components section here */}
+      </section>
+
+      <section id="category" ref={categoryRef}>
+        {/* Add your Category section here */}
+      </section>
+    </div>
+  );
 }
