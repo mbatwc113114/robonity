@@ -1,9 +1,9 @@
 import React from 'react';
 import './Projects.css';
 import Card from './Card'; // ✅ Make sure you import your Card component
-import autonomousDroneImage from '../assets/autonomusDrone.png'; 
-import swarm from '../assets/swarm.png'; // ✅ Import your images correctly
-import rover from '../assets/aiRover.png'; // ✅ Import your images correctly
+import autonomousDroneImage from '../assets/autonomusDrone.webp'; 
+import swarm from '../assets/swarm.webp'; // ✅ Import your images correctly
+import rover from '../assets/aiRover.webp'; // ✅ Import your images correctly
 // ✅ Define your button handler or pass a placeholder function
 const handleButtonClick = (title) => {
   alert(`You clicked on ${title}`);
