@@ -1,33 +1,33 @@
-#partical {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  z-index: -10;
-  pointer-events: none;
-  background: linear-gradient(135deg, #8f8f8f, #000000, #444444); /* Keep your background */
-}
-
-.particle {
-  position: absolute;
-  width: 20px; /* Smaller particles for a more refined look */
-  height: 20px;
-  background: rgba(255, 255, 255, .9);
-  border-radius: 50%;
-  opacity: 0; /* Start invisible */
-  transform: translate(-50%, -50%); /* Center the particle correctly */
-  animation: radiateParticle linear forwards;
-}
-
-@keyframes radiateParticle {
-  0% {
-    transform: translate(-50%, -50%) scale(0.2); /* Start very small and centered */
-    opacity: 0.9; /* Visible at start */
+  #partical {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -10;
+    pointer-events: none;
+    background: linear-gradient(135deg, #4e03ef, #097eec, #023998); 
   }
-  100% {
-    transform: translate(var(--endX), var(--endY)) scale(1.5); /* Move to calculated end position and grow */
-    opacity: 0; /* Fade out */
+
+  .particle {
+    position: absolute;
+    width: 20px; /* Smaller particles for a more refined look */
+    height: 20px;
+    background: rgba(255, 255, 255, .9);
+    border-radius: 50%;
+    opacity: 0; /* Start invisible */
+    transform: translate(-50%, -50%); /* Center the particle correctly */
+    animation: radiateParticle linear forwards;
   }
-}
+
+  @keyframes radiateParticle {
+    0% {
+      transform: translate(-50%, -50%) scale(0.2); /* Start very small and centered */
+      opacity: 0.9; /* Visible at start */
+    }
+    100% {
+      transform: translate(var(--endX), var(--endY)) scale(1.5); /* Move to calculated end position and grow */
+      opacity: 0; /* Fade out */
+    }
+  }

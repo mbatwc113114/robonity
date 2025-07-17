@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { Navbar, Nav, Button, Container } from 'react-bootstrap';
 import './Navbar.css';
 
-// Accept scrolling functions as props
-const CustomNavbar = ({ scrollToHero, scrollToProjects, scrollToRoadmap, scrollToEvents, scrollToRoboShare }) => {
+// Accept navItems as a prop, and keep scrollToHero separate for the brand link
+const CustomNavbar = ({ navItems = [], scrollToHero , title="title" }) => {
   const [expanded, setExpanded] = useState(false);
 
   const handleNavClick = (scrollFunction) => {
@@ -23,23 +23,22 @@ const CustomNavbar = ({ scrollToHero, scrollToProjects, scrollToRoadmap, scrollT
       fixed="top"
     >
       <Container>
-        {/* Change href to onClick */}
-        <Navbar.Brand onClick={() => handleNavClick(scrollToHero)}>Robonity</Navbar.Brand>
+        <Navbar.Brand onClick={() => handleNavClick(scrollToHero)}>{title}</Navbar.Brand>
         <Navbar.Toggle
           aria-controls="navbar-nav"
           onClick={() => setExpanded(expanded ? false : "expanded")}
         />
         <Navbar.Collapse id="navbar-nav" className="justify-content-between">
           <Nav className="mx-auto">
-            {/* Change href to onClick */}
-            <Nav.Link onClick={() => handleNavClick(scrollToProjects)}>Projects</Nav.Link>
-            <Nav.Link onClick={() => handleNavClick(scrollToRoadmap)}>Roadmap</Nav.Link>
-            <Nav.Link onClick={() => handleNavClick(scrollToEvents)}>Events</Nav.Link>
-            <Nav.Link onClick={() => handleNavClick(scrollToRoboShare)}>RoboShare</Nav.Link>
-
+            {/* Dynamically render Nav.Links based on navItems prop */}
+            {navItems.map((item, index) => (
+              <Nav.Link key={index} onClick={() => handleNavClick(item.scrollFunction)}>
+                {item.label}
+              </Nav.Link>
+            ))}
           </Nav>
           <div>
-            <Button variant="outline-light" className="me-2">Sign Up</Button>
+            <Button variant="outline-light" className="me-2 sign-up">Sign Up</Button>
             <Button variant="primary">Login</Button>
           </div>
         </Navbar.Collapse>

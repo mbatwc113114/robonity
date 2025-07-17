@@ -1,5 +1,5 @@
 // Home.js
-import React, { useRef } from 'react'; // Import useRef
+import React, { useRef } from 'react';
 import CustomNavbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Projects from '../components/Projects';
@@ -7,7 +7,7 @@ import Roadmap from '../components/Roadmap';
 import Events from '../components/Events';
 import './Home.css';
 import Partical from '../components/Partical';
-import ProgressBar from '../components/ProgressBar';
+import ProgressBar from '../components/ProgressBar'; // Assuming you use this
 import RoboShare from '../components/RoboShare';
 
 export default function Home() {
@@ -28,18 +28,23 @@ export default function Home() {
     }
   };
 
+  // Define your navigation items as an array of objects
+  const navItems = [
+    { label: 'Projects', scrollFunction: () => scrollToSection(projectsRef) },
+    { label: 'Roadmap', scrollFunction: () => scrollToSection(roadmapRef) },
+    { label: 'Events', scrollFunction: () => scrollToSection(eventsRef) },
+    { label: 'RoboShare', scrollFunction: () => scrollToSection(roboshareRef) },
+  ];
+
   return (
-   <div className="Home">
+    <div className="Home">
       {/* Fixed Navbar */}
       {/* <ProgressBar/> */}
       <CustomNavbar
+        navItems={navItems} // Pass the dynamic array of navigation items
         scrollToHero={() => scrollToSection(heroRef)}
-        scrollToProjects={() => scrollToSection(projectsRef)}
-        scrollToRoadmap={() => scrollToSection(roadmapRef)}
-        scrollToEvents={() => scrollToSection(eventsRef)}
-        scrollToRoboShare={() => scrollToSection(roboshareRef)}
+        title='Robonity' // Keep scrollToHero for the brand
       />
-
 
       <Partical/>
 
@@ -47,11 +52,10 @@ export default function Home() {
       <div className="scroll-container">
         <section id="hero" className="section" ref={heroRef}> {/* Attach ref */}
           <Hero
-           title="Robonity"
+            title="Robonity"
             subtitle="Empowering Robotics Innovation"
             description="Join our journey in building autonomous systems, intelligent machines, and impactful robotics projects for the future."
             imageSrc="https://via.placeholder.com/600x400.png?text=Robotics+Showcase"
-
           />
         </section>
 
@@ -66,11 +70,10 @@ export default function Home() {
         <section id="events" className="section" ref={eventsRef}> {/* Attach ref */}
           <Events />
         </section>
-       <section id="roboshare" className="section" ref={roboshareRef}> {/* Attach ref */}
-  <RoboShare />
-</section>
-
+        <section id="roboshare" className="section" ref={roboshareRef}> {/* Attach ref */}
+          <RoboShare />
+        </section>
       </div>
     </div>
   );
-};
+}

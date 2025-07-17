@@ -28,3 +28,10 @@
 .custom-navbar .btn.btn-primary:hover {
     background-color: rgba(0, 123, 255, 0.6);
 }
+
+
+.sign-up:hover {
+  color: rgb(255, 255, 255) !important;
+  background-color: rgb(12, 100, 231) !important;
+  border-color: rgb(53, 53, 53) !important;
+}

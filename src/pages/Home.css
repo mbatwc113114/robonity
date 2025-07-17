@@ -27,30 +27,49 @@ body {
 .section {
     scroll-snap-align: start;
     min-height: 100vh;
+    /* min-width: 80vw; */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 /* === Backgrounds === */
+
+/* === Section Backgrounds (Anti-Banding Optimized) === */
+
+/* Hero Section: Galactic Ascent (Ultra-Smooth Blue-Black to Deeper Black) */
 #hero {
-    background: linear-gradient(to right top, rgba(255, 195, 113, 0.5), rgba(255, 95, 109, 0.5));
+    background: linear-gradient(to bottom, rgba(18, 23, 38, 0.5), rgba(12, 17, 30, 0.7));
+    /* Extremely close RGB values for a perfectly smooth transition from a very dark blue-black
+       to a slightly deeper, almost imperceptibly different black. */
 }
 
+/* Projects Section: Obsidian Flow (Ultra-Smooth Dark Charcoal to Pitch Black) */
 #projects {
-    background: linear-gradient(to right, rgba(0, 90, 167, 0.5), rgba(2, 225, 255, 0.5));
+    background: linear-gradient(to bottom, rgba(28, 28, 32, 0.5), rgba(18, 18, 22, 0.7));
+    /* Seamless transition from a very dark charcoal to a marginally darker tone,
+       eliminating visible banding for a refined backdrop. */
 }
 
+/* Roadmap Section: Ethereal Path (Ultra-Smooth Deep Muted Plum to Darkest Violet) */
 #roadmap {
-    background: linear-gradient(to right, rgba(86, 171, 47, 0.5), rgba(168, 224, 99, 0.5));
+    background: linear-gradient(to bottom, rgba(32, 24, 42, 0.5), rgba(20, 14, 28, 0.7));
+    /* Subtle, smooth shift in a very dark plum/violet, designed to be imperceptible
+       as a step, only as a continuous flow. */
 }
 
+/* Events Section: Cosmic Glow (Ultra-Smooth Deep Forest Green to Dark Emerald) */
 #events {
-    background: linear-gradient(to right, rgba(170, 7, 107, 0.5), rgba(97, 4, 95, 0.5));
+    background: linear-gradient(to bottom, rgba(22, 33, 25, 0.5), rgba(17, 26, 18, 0.7));
+    /* Very slight variation in a deep, dark green, ensuring the gradient blends
+       without any visible banding. */
 }
 
+/* Roboshare Section: Digital Abyss (Ultra-Smooth Dark Teal-Blue to Deepest Navy) */
 #roboshare {
-    background: linear-gradient(to right, rgba(76, 175, 80, 0.5), rgba(139, 195, 74, 0.5));
+    background: linear-gradient(to bottom, rgba(16, 28, 38, 0.5), rgba(10, 18, 25, 0.7));
+    /* A refined and extremely smooth transition in the dark teal-blue spectrum,
+       perfect for a technical, unblemished background. */
 }
 #hero,
 #projects,
