@@ -9,7 +9,7 @@ import './Home.css';
 import Partical from '../components/Partical';
 import ProgressBar from '../components/ProgressBar'; // Assuming you use this
 import RoboShare from '../components/RoboShare';
-
+import PageTransition from '../components/PageTransition';
 export default function Home() {
   // Create refs for each section
   const heroRef = useRef(null);
@@ -40,13 +40,15 @@ export default function Home() {
     <div className="Home">
       {/* Fixed Navbar */}
       {/* <ProgressBar/> */}
+       <Partical/>
+      <PageTransition/>
       <CustomNavbar
         navItems={navItems} // Pass the dynamic array of navigation items
         scrollToHero={() => scrollToSection(heroRef)}
         title='Robonity' // Keep scrollToHero for the brand
       />
 
-      <Partical/>
+     
 
       {/* Snap Scroll Container */}
       <div className="scroll-container">

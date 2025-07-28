@@ -2,7 +2,7 @@
 
 import React from 'react';
 import './RoboShare.css';
-
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 export default function RoboShare() {
   const RoboShareRedirect = () => {
     window.location.href = "/#/roboshare"; // Redirect to the RoboShare page
@@ -13,7 +13,9 @@ export default function RoboShare() {
       <p className="roboshare-description">
         Share and explore modular robotics components, designs, and code within the Robonity community.
       </p>
-      <button onClick={()=>RoboShareRedirect()}>Visit</button>
-    </div>
+      <Link to='/roboshare'>
+      <button className='btn_' >Visit</button>
+  
+  </Link>  </div>
   );
 }

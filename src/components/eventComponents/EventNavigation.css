@@ -1,0 +1,8 @@
+.EventNavigation{
+    margin-top: 20px;
+    background-color: red;
+    position: fixed;
+    width: 25vw;
+    height: 100vh;
+    right: 0;
+}

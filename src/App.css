@@ -1,0 +1,17 @@
+.btn_{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 100px;
+    padding: 8px;
+    text-align: center;
+    border: none;
+}
+
+
+.message {
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
